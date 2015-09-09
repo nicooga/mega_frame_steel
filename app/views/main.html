@@ -1,23 +1,53 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
+<md-content class=main>
+  <div ng-include="'views/header.html'"></div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+  <slick class=carousel>
+    <div><img ng-src="http://placehold.it/1600x400"></img></div>
+    <div><img ng-src="http://placehold.it/1600x400"></img></div>
+  </slick>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+  <div layout="row" layout-align="center start" class="advantages md-whiteframe-1">
+    <div flex=20 class=advantage>
+      <img ng-src="http://placehold.it/200x200" class="md-whiteframe-z1"></img>
+      <p>Se ex veris utili modos sitas haben velim ne. Aliam ima pla hac aut porro fingi opera. To concipio persuasi imponere perfecta ac lectorum in co.</p>
+    </div>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
+    <div flex=20 class=advantage>
+      <img ng-src="http://placehold.it/200x200" class="md-whiteframe-z1"></img>
+      <p>Se ex veris utili modos sitas haben velim ne. Aliam ima pla hac aut porro fingi opera. To concipio persuasi imponere perfecta ac lectorum in co.</p>
+    </div>
+
+    <div flex=20 class=advantage>
+      <img ng-src="http://placehold.it/200x200" class="md-whiteframe-z1"></img>
+      <p>Se ex veris utili modos sitas haben velim ne. Aliam ima pla hac aut porro fingi opera. To concipio persuasi imponere perfecta ac lectorum in co.</p>
+    </div>
+  </div>
+
+  <div class="services" layout=row layout-align="center center">
+    <div flex=30>
+      <div class="steps">
+        <div class="step">
+          <span class="indicator">1</span>
+          Análisis del proyecto
+        </div>
+
+        <div class="step">
+          <md-chip>2</md-chip>
+          Ingeniería sobre plano
+        </div>
+
+        <div class="step">
+          <span class="indicator">3</span>
+          Ingeniería sobre plano
+          Bla
+        </div>
+
+        <div class="step">
+          <span class="indicator">4</span>
+          Ble
+        </div>
+      </div>
+    </div>
+    <img flex=30 ng-src="http://placehold.it/400x400" class="md-whiteframe-z1"></img>
+  </div>
+</md-content>

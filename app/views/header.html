@@ -1,0 +1,51 @@
+<md-toolbar layout="row" layout-align="space-between center" class="main-menu md-whiteframe-z1">
+  <img flex-sm src="images/logo.svg" class="logo"></img>
+
+  <span flex hide-sm></span>
+
+  <div hide-sm layout=row>
+    <md-button flex>
+      <a>Servicios</a>
+    </md-button>
+
+    <md-button flex>
+      <a>Galería</a>
+    </md-button>
+
+    <md-button flex>
+      <a>Contacto</a>
+    </md-button>
+  </div>
+
+  <md-button class="md-icon-button" ng-click="main.showMailForm()">
+    <md-icon md-svg-src="images/ic_mail_black_24px.svg"></md-icon>
+    <md-tooltip md-direction="bottom">Mandanos un mail</md-tooltip>
+  </md-button>
+
+  <md-menu hide show-sm>
+    <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)">
+      <md-icon md-svg-src="images/ic_menu_black_24px.svg"></md-icon>
+      <md-tooltip md-direction="left">Mandanos un mail</md-tooltip>
+    </md-button>
+
+    <md-menu-content width="3">
+      <md-menu-item>
+        <md-button>
+          <a>Servicios</a>
+        </md-button>
+      </md-menu-item>
+
+      <md-menu-item>
+        <md-button>
+          <a>Galería</a>
+        </md-button>
+      </md-menu-item>
+
+      <md-menu-item>
+        <md-button>
+          <a>Contacto</a>
+        </md-button>
+      </md-menu-item>
+    </md-menu-content>
+  </md-menu>
+</md-toolbar>

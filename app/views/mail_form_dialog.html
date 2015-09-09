@@ -1,0 +1,50 @@
+<md-dialog>
+  <div ng-controller="MailForm as mailForm">
+    <md-toolbar>
+      <div class="md-toolbar-tools" layout="row">
+        <span flex class="md-title">Formulario de contacto</span>
+
+        <md-button class="md-icon-button" ng-click="mailForm.hide()">
+          <md-icon md-svg-src="images/ic_close_black_24px.svg" class="md-icon-white"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <form flex layout="column" layout-padding ng-submit="mailForm.send()">
+      <md-input-container flex>
+        <label>Nombre</label>
+        <input ng-model="mailForm.$mail.name" required></input>
+      </md-input-container>
+
+      <md-input-container flex>
+        <label>Email</label>
+        <input type=email ng-model="mailForm.$mail.sender" required></input>
+      </md-input-container>
+
+      <md-input-container flex>
+        <label>Teléfono</label>
+        <input ng-model="mailForm.$mail.phone"></input>
+      </md-input-container>
+
+      <md-input-container flex>
+        <label>Comentario</label>
+        <textarea ng-model="mailForm.$mail.comment"></textarea>
+      </md-input-container>
+
+      <input flex type="submit" class="md-button md-raised md-primary" value="Enviar"></input>
+    </form>
+
+    <div class="mail-contents">
+      Has recibido un mail de contacto a través del formulario en <a href="{{ ENV.siteDomain }}" target=_blank>{{ ENV.siteDomain }}</a><br/>
+
+      <div ng-repeat="(pptyName, displayName) in {
+        name:    'Nombre',
+        sender:  'Email',
+        phone:   'Teléfono',
+        comment: 'Comentario'
+      }">
+        <strong>{{:: displayName }}:</strong> {{ mailForm.$mail[pptyName] }}
+      </div>
+    </div>
+  </div>
+</md-dialog>
