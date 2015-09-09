@@ -5,6 +5,7 @@
     "angular": "^1.3.0",
     "angular-material": "~0.10.1",
     "angular-slick": "~0.2.1",
+    "angular-smooth-scroll": "ngSmoothScroll#~1.7.1",
     "jquery": "~2.1.4",
     "mustache.js": "mustache#~2.1.3",
     "slick": "*"

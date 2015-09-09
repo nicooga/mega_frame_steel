@@ -4,7 +4,8 @@
   angular
     .module('megaFrameSteelApp', [
       'ngMaterial',
-      'slick'
+      'slick',
+      'smoothScroll'
     ])
 
     .run(function(Mandrill) {
