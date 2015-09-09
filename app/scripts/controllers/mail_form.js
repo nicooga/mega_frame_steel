@@ -1,31 +1,31 @@
 (function() {
   'use strict';
-  
+
   angular
     .module('megaFrameSteelApp')
     .controller('MailForm', MailForm);
 
-  function MailForm($mdDialog, Mandrill, $compile, $rootScope) {
+  function MailForm($mdDialog, Mandrill, $window, ENV) {
     var vm = this;
 
-    vm.$mail = {};
+    // Binded Variables
+    vm.mail = {};
 
+    // Binded Functions
     vm.hide = hide;
     vm.send = send;
-    vm.mailToHtml = mailToHtml;
 
+    // Functions
     function hide() { $mdDialog.hide(); }
 
     function send() {
-      var mail = {
-        sender:  vm.$mail.sender,
-        subject: '[CONTACTO MegaFrameSteel] ' + vm.$mail.name,
+      var mailOpts = {
+        sender:  vm.mail.sender,
+        subject: '[CONTACTO MegaFrameSteel] ' + vm.mail.name,
         body:    mailToHtml()
       }
 
-      return
-
-      Mandrill.send(mail)
+      Mandrill.send(mailOpts)
         .then(success)
         .finally(finnaly);
 
@@ -34,13 +34,13 @@
     }
 
     function mailToHtml() {
-      var template = "<div ng-include=\"'views/mail_contents.html'\"></div>",
-          scope    = angular.extend($rootScope.$new(), { $mail: vm.$mail });
-          compiled = $compile(template)(scope);
+      var template = angular.element('#mail-contents').html(),
+          data     = angular.extend({}, vm.mail, { siteDomain: ENV.siteDomain }),
+          rendered = $window.Mustache.render(template, data);
 
-      console.log(compiled.html());
+      console.log(rendered)
 
-      return compiled.html();
+      return rendered;
     }
   }
 })();

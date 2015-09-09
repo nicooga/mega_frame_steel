@@ -11,11 +11,8 @@
       Mandrill.recipient = '2112.oga@gmail.com';
     })
 
-    .run(function($rootScope) {
-      $rootScope.ENV = {
-        siteDomain: 'http://www.megaframesteel.com'
-      };
-    })
+    .constant('ENV', { siteDomain: 'http://www.megaframesteel.com' })
+    .run(function($rootScope, ENV) { $rootScope.ENV = ENV; })
 
     .config(function($mdThemingProvider) {
       $mdThemingProvider

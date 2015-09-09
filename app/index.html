@@ -21,7 +21,10 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ng-include="'views/main.html'" ng-controller="Main as main"</div>
+    <div ng-include="'views/main.html'" ng-controller="Main as main"></div>
+
+    <!-- Mustache Templates -->
+    <div ng-include="'views/mustache_templates/mail_contents.html'"></div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -32,6 +35,7 @@
     <script src="bower_components/angular-material/angular-material.js"></script>
     <script src="bower_components/slick-carousel/slick/slick.min.js"></script>
     <script src="bower_components/angular-slick/dist/slick.js"></script>
+    <script src="bower_components/mustache.js/mustache.js"></script>
     <script src="bower_components/slick/dist/slick.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
@@ -41,6 +45,6 @@
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/mail_form.js"></script>
     <script src="scripts/services/mandrill.js"></script>
-    <!-- endbuild
+    <!-- endbuild -->
 </body>
 </html>
