@@ -29,8 +29,6 @@
     "grunt-wiredep": "^2.0.0",
     "jit-grunt": "^0.9.1",
     "jshint-stylish": "^1.0.0",
-    "karma-jasmine": "*",
-    "karma-phantomjs-launcher": "*",
     "time-grunt": "^1.0.0"
   },
   "devDependencies": {
@@ -70,7 +68,7 @@
   },
   "scripts": {
     "test": "echo 'HAHA NO TESTS!'",
-    "start": "grunt serve --port $PORT",
+    "start": "./node_modules/grunt-cli/bin/grunt serve --port $PORT",
     "postinstall": "bower install && ./node_modules/grunt-cli/bin/grunt build"
   }
 }
