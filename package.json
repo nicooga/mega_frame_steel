@@ -61,8 +61,5 @@
     "jshint-stylish": "^1.0.0",
     "time-grunt": "^1.0.0"
   },
-  "engines": {
-    "node": "0.10.0"
-  },
   "scripts": { }
 }
