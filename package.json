@@ -44,9 +44,5 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "scripts": {
-    "test": "echo 'HAHA NO TESTS!'",
-    "start": "grunt serve --port $PORT",
-    "postinstall": "bower install && grunt build"
-  }
+  "scripts": { }
 }
