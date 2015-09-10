@@ -7,7 +7,8 @@
     "grunt-cli": "^0.1.13",
     "jit-grunt": "^0.9.1",
     "jshint-stylish": "^1.0.0",
-    "time-grunt": "^1.0.0"
+    "time-grunt": "^1.0.0",
+    "grunt-contrib-clean": "^0.6.0"
   },
   "devDependencies": {
     "bower": "^1.5.2",
