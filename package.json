@@ -46,7 +46,7 @@
   },
   "scripts": {
     "test": "echo 'HAHA NO TESTS!'",
-    "start": "./node_modules/grunt-cli/bin/grunt serve --port $PORT",
-    "postinstall": "bower install && ./node_modules/grunt-cli/bin/grunt build"
+    "start": "grunt serve --port $PORT",
+    "postinstall": "bower install && grunt build"
   }
 }
