@@ -1,10 +1,17 @@
 {
   "name": "megaframesteel",
   "private": true,
+  "dependencies": {
+    "bower": "^1.5.2",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13"
+  },
   "devDependencies": {
+    "bower": "^1.5.2",
     "grunt": "^0.4.5",
     "grunt-angular-templates": "^0.5.7",
     "grunt-autoprefixer": "^2.0.0",
+    "grunt-cli": "^0.1.13",
     "grunt-concurrent": "^1.0.0",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-compass": "^1.0.0",
@@ -36,6 +43,7 @@
   },
   "scripts": {
     "test": "grunt test",
-    "start": "grunt build && grunt serve --port $PORT"
+    "start": "grunt serve --port $PORT",
+    "postinstall": "bower install && grunt build"
   }
 }
