@@ -71,6 +71,6 @@
   "scripts": {
     "test": "echo 'HAHA NO TESTS!'",
     "start": "grunt serve --port $PORT",
-    "postinstall": "bower install && grunt build"
+    "postinstall": "bower install && ./node_modules/grunt-cli/bin/grunt build"
   }
 }
