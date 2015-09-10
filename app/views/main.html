@@ -1,53 +1,64 @@
-<md-content class=main>
+<md-content class=main data-sr-container>
   <div ng-include="'views/header.html'"></div>
 
-  <slick class=carousel>
-    <div><img ng-src="http://placehold.it/1600x400"></img></div>
-    <div><img ng-src="http://placehold.it/1600x400"></img></div>
-  </slick>
+  <div class=carousel>
+    <slick>
+      <div ng-repeat="fileName in [
+        'nice_carousel_1.jpg',
+        'nice_carousel_2.jpg',
+        'nice_carousel_3.jpg'
+      ]"
+      ><img ng-src="images/{{fileName}}"></img></div>
+    </slick>
 
-  <div layout="row" layout-align="center start" class="advantages md-whiteframe-1">
-    <div flex=20 class=advantage>
-      <img ng-src="http://placehold.it/200x200" class="md-whiteframe-z1"></img>
-      <p>Se ex veris utili modos sitas haben velim ne. Aliam ima pla hac aut porro fingi opera. To concipio persuasi imponere perfecta ac lectorum in co.</p>
-    </div>
+    <div class="caption md-display-2" layout=row layout-align="center center">
+      <span>
+        <strong>El futuro de la construcción en seco ya esta aquí</strong><br/>
+        Conozca las ventajas del steel framing
+      </span>
 
-    <div flex=20 class=advantage>
-      <img ng-src="http://placehold.it/200x200" class="md-whiteframe-z1"></img>
-      <p>Se ex veris utili modos sitas haben velim ne. Aliam ima pla hac aut porro fingi opera. To concipio persuasi imponere perfecta ac lectorum in co.</p>
-    </div>
-
-    <div flex=20 class=advantage>
-      <img ng-src="http://placehold.it/200x200" class="md-whiteframe-z1"></img>
-      <p>Se ex veris utili modos sitas haben velim ne. Aliam ima pla hac aut porro fingi opera. To concipio persuasi imponere perfecta ac lectorum in co.</p>
+      <md-button class="md-primary md-raised" ng-click="main.showMailForm()">Contáctenos</md-button>
     </div>
   </div>
 
-  <div id=services class=services layout=row layout-align="center center">
+  <div ng-include="'views/advantages.html'"></div>
+
+  <div id=services class=services layout-gt-sm=row layout-align="center center">
     <div flex=30>
-      <div class="steps">
-        <div class="step">
-          <span class="indicator">1</span>
+      <div class=steps layout=column layout-padding>
+        <div flex class=step data-sr="wait 2.5s">
+          <span class="indicator md-whiteframe-z1">1</span>
           Análisis del proyecto
         </div>
 
-        <div class="step">
-          <span>2</span>
+        <div flex class=step data-sr="wait 2.5s">
+          <span class="indicator md-whiteframe-z1">2</span>
           Ingeniería sobre plano
         </div>
 
-        <div class="step">
-          <span class="indicator">3</span>
+        <div flex class=step data-sr="wait 2.5s">
+          <span class="indicator md-whiteframe-z1">3</span>
           Ingeniería sobre plano
           Bla
         </div>
 
-        <div class="step">
-          <span class="indicator">4</span>
+        <div flex class=step data-sr="wait 2.5s">
+          <span class="indicator md-whiteframe-z1">4</span>
           Ble
         </div>
       </div>
     </div>
-    <img flex=30 ng-src="http://placehold.it/400x400" class="md-whiteframe-z1"></img>
+    <img flex=30 ng-src="http://placehold.it/400x400" class="md-whiteframe-z1" data-sr="wait 2.5s"></img>
+  </div>
+
+  <div id=contact class=contact>
+    <ul>
+      <li>
+        <strong>Teléfono:</strong> 1234 5678
+      </li>
+      <li>
+        <strong>Email:</strong> email@dominio.com
+      </li>
+    </ul>
   </div>
 </md-content>

@@ -5,7 +5,8 @@
     .module('megaFrameSteelApp', [
       'ngMaterial',
       'slick',
-      'smoothScroll'
+      'smoothScroll',
+      'fox.scrollReveal'
     ])
 
     .run(function(Mandrill) {
