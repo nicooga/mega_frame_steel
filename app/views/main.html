@@ -1,25 +1,7 @@
 <md-content class=main data-sr-container>
-  <div ng-include="'views/header.html'"></div>
+  <div ng-include="'views/toolbar.html'"></div>
 
-  <div class=carousel>
-    <slick>
-      <div ng-repeat="fileName in [
-        'nice_carousel_1.jpg',
-        'nice_carousel_2.jpg',
-        'nice_carousel_3.jpg'
-      ]"
-      ><img ng-src="images/{{fileName}}"></img></div>
-    </slick>
-
-    <div class="caption md-display-2" layout=row layout-align="center center">
-      <span>
-        <strong>El futuro de la construcción en seco ya esta aquí</strong><br/>
-        Conozca las ventajas del steel framing
-      </span>
-
-      <md-button class="md-primary md-raised" ng-click="main.showMailForm()">Contáctenos</md-button>
-    </div>
-  </div>
+  <div ng-include="'views/carousel.html'"></div>
 
   <div ng-include="'views/advantages.html'"></div>
 
