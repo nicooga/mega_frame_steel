@@ -1,4 +1,4 @@
-<div class=carousel>
+<div class="carousel section">
   <slick>
     <div ng-repeat="fileName in [
       'nice_carousel_1.jpg',
@@ -8,12 +8,14 @@
     ><img ng-src="images/{{fileName}}"></img></div>
   </slick>
 
-  <div class="caption md-display-2" layout=row layout-align="center center">
-    <span>
+  <div class="caption">
+    <div class="md-display-2" data-sr="enter bottom">
       <strong>El futuro de la construcción en seco ya esta aquí</strong><br/>
-      Conozca las ventajas del steel framing
-    </span>
+    </div>
 
+    <md-button class="md-raised" scroll-to="advantages" offset=64>
+      Conozca las ventajas del <strong class="md-accent">steel framing</strong>
+    </md-button>
     <md-button class="md-primary md-raised" ng-click="main.showMailForm()">Contáctenos</md-button>
   </div>
 </div>

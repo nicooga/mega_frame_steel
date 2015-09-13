@@ -1,37 +1,8 @@
-<md-content class=main data-sr-container>
+<md-content class=main data-sr-container='{ "wait": "0.5s", "reset": true }'>
   <div ng-include="'views/toolbar.html'"></div>
-
   <div ng-include="'views/carousel.html'"></div>
-
   <div ng-include="'views/advantages.html'"></div>
-
-  <div id=services class=services layout-gt-sm=row layout-align="center center">
-    <div flex=30>
-      <div class=steps layout=column layout-padding>
-        <div flex class=step data-sr="wait 2.5s">
-          <span class="indicator md-whiteframe-z1">1</span>
-          Análisis del proyecto
-        </div>
-
-        <div flex class=step data-sr="wait 2.5s">
-          <span class="indicator md-whiteframe-z1">2</span>
-          Ingeniería sobre plano
-        </div>
-
-        <div flex class=step data-sr="wait 2.5s">
-          <span class="indicator md-whiteframe-z1">3</span>
-          Ingeniería sobre plano
-          Bla
-        </div>
-
-        <div flex class=step data-sr="wait 2.5s">
-          <span class="indicator md-whiteframe-z1">4</span>
-          Ble
-        </div>
-      </div>
-    </div>
-    <img flex=30 ng-src="http://placehold.it/400x400" class="md-whiteframe-z1" data-sr="wait 2.5s"></img>
-  </div>
+  <div ng-include="'views/services.html'"></div>
 
   <div id=contact class=contact>
     <ul>
