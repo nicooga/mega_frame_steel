@@ -1,17 +1,8 @@
-<md-content class=main data-sr-container='{ "wait": "0.5s", "reset": true }'>
+<md-content class=main data-sr-container='{ "wait": "0.5s", "reset": true, "move": "50px" }'>
   <div ng-include="'views/toolbar.html'"></div>
   <div ng-include="'views/carousel.html'"></div>
   <div ng-include="'views/advantages.html'"></div>
   <div ng-include="'views/services.html'"></div>
-
-  <div id=contact class=contact>
-    <ul>
-      <li>
-        <strong>Teléfono:</strong> 1234 5678
-      </li>
-      <li>
-        <strong>Email:</strong> email@dominio.com
-      </li>
-    </ul>
-  </div>
+  <div ng-include="'views/gallery.html'"></div>
+  <div ng-include="'views/contact.html'"></div>
 </md-content>

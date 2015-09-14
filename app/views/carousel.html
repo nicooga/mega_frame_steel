@@ -1,21 +1,20 @@
-<div class="carousel section">
+<div class="carousel section full-heigth-section" id=carousel>
   <slick>
-    <div ng-repeat="fileName in [
-      'nice_carousel_1.jpg',
-      'nice_carousel_2.jpg',
-      'nice_carousel_3.jpg'
-    ]"
-    ><img ng-src="images/{{fileName}}"></img></div>
+    <div repeat-times=3>
+      <img ng-src="images/carousel/{{:: $index + 1}}.jpg"></img>
+    </div>
   </slick>
 
   <div class="caption">
-    <div class="md-display-2" data-sr="enter bottom">
-      <strong>El futuro de la construcción en seco ya esta aquí</strong><br/>
-    </div>
+    <div data-sr="enter bottom, over 2s">
+      <div class="md-display-2">
+        <strong>El futuro de la construcción en seco ya esta aquí</strong><br/>
+      </div>
 
-    <md-button class="md-raised" scroll-to="advantages" offset=64>
-      Conozca las ventajas del <strong class="md-accent">steel framing</strong>
-    </md-button>
-    <md-button class="md-primary md-raised" ng-click="main.showMailForm()">Contáctenos</md-button>
+      <md-button class="md-raised" scroll-to="advantages" offset=64>
+        Conozca las ventajas del <strong class="md-accent">steel framing</strong>
+      </md-button>
+      <md-button class="md-primary md-raised" ng-click="main.showMailForm()">Contáctenos</md-button>
+    </div>
   </div>
 </div>
