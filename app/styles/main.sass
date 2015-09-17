@@ -1,14 +1,9 @@
+@import 'compass'
+
 @mixin background-pattern($src)
   background-repeat: repeat
   background-image: url("../images/patterns/#{$src}.png")
   background-size: 27vw
-
-@import 'compass'
-@import 'menu'
-@import 'carousel'
-@import 'advantages'
-@import 'services'
-@import 'gallery'
 
 .dark-background
   @include background-pattern('dark')
@@ -21,6 +16,9 @@
 .light-background
   @include background-pattern('light')
   background-size: 2vw
+
+md-divider
+  border-width: 10px
 
 body
   background-color: whitesmoke
@@ -60,3 +58,9 @@ md-icon.md-icon-white svg
 
 [data-sr]
   visibility: hidden
+
+@import 'menu'
+@import '_carousel'
+@import '_advantages'
+@import 'services'
+@import 'gallery'
