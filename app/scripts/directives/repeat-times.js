@@ -3,7 +3,7 @@
     .module('megaFrameSteelApp')
     .directive('repeatTimes', repeatTimes);
 
-  function repeatTimes ($window, $compile) {
+  function repeatTimes($window, $compile) {
     return { link: link };
 
     function link (scope, element, attrs) {

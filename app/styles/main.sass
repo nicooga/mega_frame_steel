@@ -1,5 +1,7 @@
 @import 'compass'
 
+$green: rgb(178,255,89)
+
 @mixin background-pattern($src)
   background-repeat: repeat
   background-image: url("../images/patterns/#{$src}.png")
@@ -8,10 +10,12 @@
 .dark-background
   @include background-pattern('dark')
   background-size: 7vw
-  color: white
 
   md-divider
-    border-color: yellowgreen
+    border-color: $green
+
+  .md-display-1
+    color: white
 
 .light-background
   @include background-pattern('light')
@@ -20,45 +24,35 @@
 md-divider
   border-width: 10px
 
-body
-  background-color: whitesmoke
-  padding-top: 64px
+.md-button
+  text-transform: none
+  padding: 0 10px
 
 md-icon.md-icon-white svg
   fill: white
 
-.color-white
-  color: white
-
 .slick-slider
   overflow: hidden
 
-.hidden
-  display:    none
-  visibility: hidden
-
-.text-align-center
-  text-align: center
-
-.section
-  &.bordered-section
-    border-bottom: 15px solid yellowgreen
-    border-top: 15px solid yellowgreen
-
+section
   &.full-heigth-section
     width: 100%
     height: calc(100vh - 64px)
 
-  &.min-heigth-section
+  &.min-height-section
     height: auto
     min-height: calc(100vh - 64px)
 
   &.padded-section
     padding: 70px 0
 
+  > .md-display-1
+    margin-bottom: 30px
+
 [data-sr]
   visibility: hidden
 
+@import '_helpers'
 @import 'menu'
 @import '_carousel'
 @import '_advantages'

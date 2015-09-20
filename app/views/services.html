@@ -1,37 +1,30 @@
-<div id=services class="services section padded-section min-height-section bordered-section dark-background" layout-gt-sm=row layout-align="center start" layout-padding>
-  <div flex=30 class="services-list" layout=column layout-padding data-sr="enter left, vFactor 0.1, no reset">
-    <div flex>
-      <h3 class="md-title">Predimensionamiento estructural y cómputo de materiales</h3>
-      <md-divider></md-divider>
-      <p>Ponemos a su disposición esta herramienta para la estimación de costos directos de construcción, en etapa de anteproyecto.</p>
-    </div>
-
-    <div flex>
-      <h3 class="md-title">Diseño y cálculo de estructuras</h3>
-      <md-divider></md-divider>
-      <p>Proponemos el esquema estructural más apropiado, tomando como base los condicionantes del proyecto ejecutivo, teniendo en cuenta los diversos factores que influyen en el éxito de la obra en su conjunto.</p>
-    </div>
-
-    <div flex>
-      <h3 class="md-title">Ingeniería de detalle</h3>
-      <md-divider></md-divider>
-      <p>Desarrollamos la documentación necesaria como soporte técnico fundamental en etapa de construcción, optimizando la gestión de recursos, tanto materiales como de mano de obra.</p>
-    </div>
-
-    <div flex>
-      <h3 class="md-title">Proyectos de arquitectura</h3>
-      <md-divider></md-divider>
-      <p>Desarrollamos proyectos integrales, en base a los requisitos específicos del comitente, optimizando la utilización de recursos tanto materiales como de mano de obra, en base a la materialidad del sistema y al proceso constructivo en su conjunto.</p>
-    </div>
-
-    <div flex>
-      <h3 class="md-title">Asistencia en Obra</h3>
-      <md-divider></md-divider>
-      <p>Realizamos visitas a obras con el objeto de verificar la correcta interpretación de la documentación entregada por Consul Steel, con el fin de obtener un proyecto ejecutado de acuerdo a las reglas del arte del Steel Framing en función de la ingeniería de detalle recibida. Este servicio consiste en un conjunto de medidas y procesos tendientes a asistir técnicamente al constructor y al grupo de operarios que realizará la obra, y orientarlos en la interpretación de los planos, y las etapas críticas del montaje de la estructura. Relevamiento de procesos, asesoramiento sobre aplicación de refuerzos adicionales, y resolución de detalles constructivos, son algunos de los ítems incluidos. La experiencia generada es altamente altamente positiva, en pos de mantener un estándar y una excelencia del sistema constructivo y la optimización de los tiempos, recursos y desperdicio de materiales, trabajando en conjunto y estrechamente ligados. También realizamos auditorias para obras realizadas con documentación externa a Consul, en donde generamos un informe completo sobre lo analizado y las posibles modificaciones, y ajustes que deberían realizarse para mejorar la performance de la construcción.</p>
-    </div>
+<section id=services class="services padded-section min-height-section dark-background" layout=column layout-align="center center">
+  <div class="md-display-1 text-align-center" data-sr="enter top">
+    Servicios
+    <md-divider></md-divider>
   </div>
 
-  <div flex=30>
-    <img ng-src="http://placehold.it/400x400" class="md-whiteframe-z1" data-sr="enter right, no reset"></img>
+  <div layout=row layout-wrap layout-align="center">
+    <md-card flex flex-sm=100 ng-repeat="service in [
+      {
+        title: 'Predimensionamiento estructural y cómputo de materiales',
+        description: 'Ponemos a su disposición esta herramienta para la estimación de costos directos de construcción, en etapa de anteproyecto.'
+      }, {
+        title: 'Diseño y cálculo de estructuras',
+        description: 'Proponemos el esquema estructural más apropiado, tomando como base los condicionantes del proyecto ejecutivo, teniendo en cuenta los diversos factores que influyen en el éxito de la obra en su conjunto.'
+      }, {
+        title: 'Ingeniería de detalle',
+        description: 'Desarrollamos la documentación necesaria como soporte técnico fundamental en etapa de construcción, optimizando la gestión de recursos, tanto materiales como de mano de obra.'
+      }, {
+        title: 'Proyectos de arquitectura',
+        description: 'Desarrollamos proyectos integrales, en base a los requisitos específicos del comitente, optimizando la utilización de recursos tanto materiales como de mano de obra, en base a la materialidad del sistema y al proceso constructivo en su conjunto.'
+      }
+    ]">
+      <img ng-src="http://placehold.it/400x400" class="md-whiteframe-z1"></img>
+      <md-card-content>
+        <h2 class="md-title">{{ service.title }}</h2>
+        <p>{{ service.description }}</p>
+      </md-card-content>
+    </md-card>
   </div>
-</div>
+</section>
