@@ -4,26 +4,28 @@
     <md-divider></md-divider>
   </div>
 
-  <div layout="row" layout-padding layout-wrap layout-align="center end">
-    <div flex=20 flex-sm=100 data-sr="enter left">
-      <md-icon md-svg-src="images/icons/money.svg"></md-icon>
-      <h3 class="md-title">Óptima relación costo/calidad</h3>
+  <div layout=row layout-padding layout-wrap layout-align="center start">
+    <div flex=20 flex-sm=100 flex-md=40 data-sr="enter left" ng-repeat="advantage in [
+      {
+      text: 'Ya sea para una construccion nueva, ampliacion o una simple reforma, el sistema <strong>STEEL FRAMING</strong> es una exelente opcion porque se adapta a cualquier diseño o arquitectura y material, permitiendo una optima relacion costo calidad.',
+        iconName: 'money'
+      },
+      {
+        text: 'La construccion es precisa, eficiente y mas limpia permitiendo realizar el prefabricado en taller o en obra sin depender del uso de maquinaria pesada. Permite mayor control de los materiales y menor desperdicio.',
+        iconName: 'ecology'
+      },{
+        text: 'El sistema constructivo cumple con la ley 13059 para acondicionamiento termico logrando una aislacion termica y acustica mayor que las construcciones tradicionales. Otorgando un mejor confort en el interior de la vivienda y reduciendo el consumo de energia.',
+        iconName: 'energy'
+      },{
+        text: 'Se reduce el tiempo de obra debido a la rapidez del montaje de los componentes, teniendo una importante reduccion de los costos.',
+        iconName: 'time'
+      }
+    ]">
+      <div class="icon">
+        <md-icon md-svg-src="images/icons/{{:: advantage.iconName }}.svg"></md-icon>
+      </div>
       <md-divider></md-divider>
-      <p >Se ex veris utili modos sitas haben velim ne. Aliam ima pla hac aut porro fingi opera. To concipio persuasi imponere perfecta ac lectorum in co.</p>
-    </div>
-
-    <div flex=20 flex-sm=100 data-sr="enter bottom">
-      <md-icon md-svg-src="images/icons/time.svg"></md-icon>
-      <h3 class="md-title">Rápido</h3>
-      <md-divider></md-divider>
-      <p> Se ex veris utili modos sitas haben velim ne. Aliam ima pla hac aut porro fingi opera. To concipio persuasi imponere perfecta ac lectorum in co.</p>
-    </div>
-
-    <div flex=20 flex-sm=100 data-sr="enter right">
-      <md-icon md-svg-src="images/icons/ecology.svg"></md-icon>
-      <h3 class="md-title">Limpio</h3>
-      <md-divider></md-divider>
-      <p>Se ex veris utili modos sitas haben velim ne. Aliam ima pla hac aut porro fingi opera. To concipio persuasi imponere perfecta ac lectorum in co.</p>
+      <p ng-bind-html="advantage.text"></p>
     </div>
   </div>
 </section>

@@ -3,6 +3,7 @@
 
   angular
     .module('megaFrameSteelApp', [
+    'ngSanitize',
     'ngMaterial',
     'slick',
     'smoothScroll',

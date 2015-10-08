@@ -7,20 +7,20 @@
   <div layout=row layout-wrap layout-align="center">
     <md-card flex flex-sm=100 ng-repeat="service in [
       {
-        title: 'Predimensionamiento estructural y cómputo de materiales',
-        description: 'Ponemos a su disposición esta herramienta para la estimación de costos directos de construcción, en etapa de anteproyecto.'
+        title: 'Remodelaciones',
+        description: 'Tabiques, divisiones de interior, cielorrasos, placas de yeso, revestimientos, pisos flotantes, molduras de interior y exterior, instalacion de aberturas en general (madera, aluminio, PVC), ampliaciones.',
+        imageName: 'remodelacion.jpg'
       }, {
-        title: 'Diseño y cálculo de estructuras',
-        description: 'Proponemos el esquema estructural más apropiado, tomando como base los condicionantes del proyecto ejecutivo, teniendo en cuenta los diversos factores que influyen en el éxito de la obra en su conjunto.'
+        title: 'Proyectos',
+        description: 'Arquitectura, ingenieria, planos, servicio de topografia, venta y alquiler de obrador, perforacion para captacion de agua, cerco de obra, bases y plateas de hormigon.',
+        imageName: 'proyectos.jpg'
       }, {
-        title: 'Ingeniería de detalle',
-        description: 'Desarrollamos la documentación necesaria como soporte técnico fundamental en etapa de construcción, optimizando la gestión de recursos, tanto materiales como de mano de obra.'
-      }, {
-        title: 'Proyectos de arquitectura',
-        description: 'Desarrollamos proyectos integrales, en base a los requisitos específicos del comitente, optimizando la utilización de recursos tanto materiales como de mano de obra, en base a la materialidad del sistema y al proceso constructivo en su conjunto.'
+        title: 'Steel Framing',
+        description: 'Diseño y calculo de estructuras, ingenieria de detalle, planos de taller, computo de materiales, fabricacion y montaje, direccion de obra.',
+        imageName: 'steel_framing.jpg'
       }
     ]">
-      <img ng-src="http://placehold.it/400x400" class="md-whiteframe-z1"></img>
+      <img ng-src="/images/services/{{service.imageName}}" class="md-whiteframe-z1"></img>
       <md-card-content>
         <h2 class="md-title">{{ service.title }}</h2>
         <p>{{ service.description }}</p>
