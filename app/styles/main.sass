@@ -2,25 +2,6 @@
 
 $green: rgb(178,255,89)
 
-@mixin background-pattern($src)
-  background-repeat: repeat
-  background-image: url("../images/patterns/#{$src}.png")
-  background-size: 27vw
-
-.dark-background
-  @include background-pattern('dark')
-  background-size: 7vw
-
-  md-divider
-    border-color: $green
-
-  .md-display-1
-    color: white
-
-.light-background
-  @include background-pattern('light')
-  background-size: 2vw
-
 md-divider
   border-width: 10px
 
@@ -34,8 +15,15 @@ md-divider
 md-icon.md-icon-white svg
   fill: white
 
+md-card
+  overflow: hidden
+
 .slick-slider
   overflow: hidden
+
+a
+  color: inherit
+  text-decoration: none
 
 section
   &.full-heigth-section
@@ -61,3 +49,4 @@ section
 @import '_advantages'
 @import 'services'
 @import 'gallery'
+@import '_footer'

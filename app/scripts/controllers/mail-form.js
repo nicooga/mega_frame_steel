@@ -5,7 +5,7 @@
     .module('megaFrameSteelApp')
     .controller('MailForm', MailForm);
 
-  function MailForm($mdDialog, Mandrill, $window, ENV) {
+  function MailForm($mdDialog, Mandrill, $window, ENV, $mdToast) {
     var vm = this;
 
     // Binded Variables
@@ -16,7 +16,10 @@
     vm.send = send;
 
     // Functions
-    function hide() { $mdDialog.hide(); }
+    function hide() {
+      $mdDialog.hide();
+      vm.mail = {};
+    }
 
     function send() {
       var mailOpts = {
@@ -29,16 +32,30 @@
         .then(success)
         .finally(finnaly);
 
-      function success() { vm.$mail = {}; }
+      function success() {
+        clear();
+        showSuccessToast();
+      }
+
       function finnaly() { hide(); }
+    }
+
+    function clear() {
+      vm.mail = {};
+    }
+
+    function showSuccessToast() {
+      var toast = $mdToast.simple()
+        .content('Hello!')
+        .capsule();
+
+      $mdToast.show(toast);
     }
 
     function mailToHtml() {
       var template = angular.element('#mail-contents').html(),
           data     = angular.extend({}, vm.mail, { siteDomain: ENV.siteDomain }),
           rendered = $window.Mustache.render(template, data);
-
-      console.log(rendered)
 
       return rendered;
     }

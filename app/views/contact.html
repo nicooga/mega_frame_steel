@@ -1,10 +1,27 @@
 <section id=contact class="contact padded-section bordered-section dark-background">
-  <md-content>
-    <em>Llamanos al</em> <strong>1234 5678</strong><br/>
+  <div layout=row layout-align="center center" layout-margin layout-wrap>
+    <p flex flex-gt-sm=40 flex-sm=100 class="text-align-right color-white md-subhead">
+      Llamanos al 
 
-    <em>Mandanos un mail a</em> <strong>email@dominio.com</strong><br/>
+      <strong>
+        <a href="tel:{{:: ENV.contact.phone }}">{{:: ENV.contact.phone }}</a>
+      </strong>
 
-    O simplemente usa nuestro<br/>
-    <md-button class="md-raised" ng-click="main.showMailForm()">formulario de contacto</md-button>
-  </md-content>
+      <br/>
+
+      Mandanos un mail a 
+
+      <strong>
+        <a href="mailto:{{:: ENV.contact.email }}">{{:: ENV.contact.email }}</a>
+      </strong>
+
+      <br/>
+
+      O simplemente usa nuestro formulario de contacto.
+    </p>
+
+    <md-card flex flex-gt-sm=30 flex-sm=100 class="md-whiteframe-z1">
+      <mail-form show-close-button=false></mail-form>
+    </md-card>
+  </div>
 </section>
