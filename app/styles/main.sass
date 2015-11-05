@@ -1,6 +1,15 @@
 @import 'compass'
 
 $green: rgb(178,255,89)
+$facebook-blue: #3b5998
+
+@import '_helpers'
+@import 'menu'
+@import '_carousel'
+@import '_advantages'
+@import 'services'
+@import 'gallery'
+@import '_footer'
 
 md-divider
   border-width: 10px
@@ -43,10 +52,7 @@ section
 [data-sr]
   visibility: hidden
 
-@import '_helpers'
-@import 'menu'
-@import '_carousel'
-@import '_advantages'
-@import 'services'
-@import 'gallery'
-@import '_footer'
+.facebook-button
+  position: fixed !important
+  bottom: 0 !important
+  background-color: $facebook-blue !important
