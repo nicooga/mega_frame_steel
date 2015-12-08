@@ -11,8 +11,8 @@
       'scrollToFixed'
     ])
 
-    .run(function(Mandrill) {
-      Mandrill.recipient = '2112.oga@gmail.com';
+    .run(function(Mandrill, ENV) {
+      Mandrill.recipient = ENV.contact.email;
     })
 
     .constant('ENV', {
