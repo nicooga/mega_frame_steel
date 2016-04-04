@@ -17,7 +17,7 @@
 
     .constant('ENV', {
       siteDomain: 'http://www.megaframesteel.com',
-      facebookLink: "https://www.facebook.com/profile.php?id=100004644345488",
+      facebookLink: "https://www.facebook.com/Mega-Frame-1061657680553709/",
       contact: {
         phone: "11 5855 5216",
         email: "megaframeweb@gmail.com"
