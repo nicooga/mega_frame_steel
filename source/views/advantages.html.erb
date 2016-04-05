@@ -8,7 +8,7 @@
     <% advantages.each do |a| %>
       <div flex=20 flex-sm=100 flex-md=40>
         <div class="icon">
-          <md-icon md-svg-src="<%= image_path "icons/#{a.fetch(:icon_name)}.svg" %>"></md-icon>
+          <md-icon md-svg-src="<%= "images/icons/#{a.fetch(:icon_name)}.svg" %>"></md-icon>
         </div>
         <md-divider></md-divider>
         <h3><%= a.fetch(:title) %></h3>
