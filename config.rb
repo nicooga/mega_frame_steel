@@ -12,7 +12,6 @@ configure :build do
   activate :minify_javascript
 end
 
-activate :external_pipeline,
-  name: :bower,
-  command: "bower install",
-  source: "vendor/assets/bower"
+after_configuration do
+  sprockets.append_path File.join("#{root}", "vendor/assets/bower")
+end
