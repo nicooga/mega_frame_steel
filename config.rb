@@ -16,6 +16,10 @@ after_configuration do
   sprockets.append_path File.join("#{root}", "vendor/assets/bower")
 end
 
+# Needeed to reference assets on gh-pages
+activate :relative_assets
+set :relative_links, true
+
 set :advantages, [{
   title: 'Óptima relacion costo/calidad',
   text: 'Ya sea para una construcción nueva, ampliación o una simple reforma, el sistema STEEL FRAMING es una excelente opción porque se adapta a cualquier diseño o arquitectura y material, permitiendo una óptima relación costo/calidad.',
