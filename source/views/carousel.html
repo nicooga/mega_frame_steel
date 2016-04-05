@@ -1,0 +1,19 @@
+<section class="carousel section full-heigth-section" id=carousel>
+  <slick autoplay=true speed=500 arrows=false>
+    <div repeat-times=3>
+      <img ng-src="images/carousel/{{:: $index + 1}}.jpg"></img>
+    </div>
+  </slick>
+
+  <div class="caption">
+    <div class="md-display-2 title">
+      La Mejor Elección de Sistema Constructivo
+    </div>
+
+    <md-button class="md-raised" scroll-to="advantages" offset=64>
+      Conozca las ventajas del <strong>STEEL FRAMING</strong>
+    </md-button>
+
+    <md-button class="md-accent md-raised" ng-click="main.showMailForm()">Contáctenos</md-button>
+  </div>
+</section>

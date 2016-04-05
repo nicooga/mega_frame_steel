@@ -137,8 +137,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  middleman (>= 4.0.0)
-  middleman-compass (>= 4.0.0)
+  middleman
+  middleman-compass
   middleman-livereload
   slim
   tzinfo-data

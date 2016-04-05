@@ -1,0 +1,36 @@
+<section class="advantages md-whiteframe-1 section min-height-section padded-section light-background" id="advantages" layout="column" layout-align="center center">
+  <div class="md-display-1 text-align-center">
+    Ventajas de la construción en seco con STEEL FRAMING
+    <md-divider></md-divider>
+  </div>
+
+  <div layout=row layout-padding layout-wrap layout-align="center start">
+    <div flex=20 flex-sm=100 flex-md=40 ng-repeat="advantage in [
+      {
+        title: 'Óptima relacion costo/calidad',
+        text: 'Ya sea para una construcción nueva, ampliación o una simple reforma, el sistema STEEL FRAMING es una excelente opción porque se adapta a cualquier diseño o arquitectura y material, permitiendo una óptima relación costo/calidad.',
+        iconName: 'money'
+      },
+      {
+        title: 'Menos desperdicio',
+        text: 'La construcción es precisa, eficiente y más limpia, permitiendo realizar el prefabricado en taller o en obra sin depender del uso de maquinaria pesada. Permite mayor control de los materiales y menor desperdicio.',
+        iconName: 'ecology'
+      },{
+        title: 'Ahorro de energìa',
+        text: 'El sistema constructivo cumple con la Ley 13059 para acondicionamiento térmico, logrando una aislación térmica y acústica mayor que las construcciones tradicionales. Otorgamos un mejor confort en el interior de la vivienda y reduciendo el consumo de energía.',
+        iconName: 'energy'
+      },{
+        title: 'Rápidez',
+        text: 'Se reduce el tiempo de obra debido a la rapidez del montaje de los componentes, teniendo una importante reducción de los costos.',
+        iconName: 'time'
+      }
+    ]">
+      <div class="icon">
+        <md-icon md-svg-src="images/icons/{{:: advantage.iconName }}.svg"></md-icon>
+      </div>
+      <md-divider></md-divider>
+      <h3>{{:: advantage.title }}</h3>
+      <p ng-bind-html="advantage.text"></p>
+    </div>
+  </div>
+</section>

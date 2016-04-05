@@ -1,13 +1,46 @@
----
-title: Welcome to Middleman
----
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MegaFrame</title>
+    <meta name="description" content="">
+    <link rel="icon" href="/images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag "angular-material/angular-material.css" %>
+    <%= stylesheet_link_tag "slick-carousel/slick/slick.css" %>
+    <%= stylesheet_link_tag "slick-carousel/slick/slick-theme.css" %>
+    <%= stylesheet_link_tag "main" %>
+  </head>
 
-<div class="welcome">
-  <div class="logo">
-    <%= image_tag "middleman-logo.svg" %>
-  </div>
-  <h1>Middleman is Running</h1>
-  <p class="doc">
-    <%= link_to "Read Documentation Online", "https://middlemanapp.com", target: "_blank" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+  <body ng-app="megaFrameSteelApp">
+    <!--[if lte IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div ng-include="'views/main.html'" ng-controller="Main as main"></div>
+
+    <!-- Mustache Templates -->
+    <div ng-include="'views/mustache_templates/mail_contents.html'"></div>
+
+    <%= javascript_include_tag "jquery/dist/jquery.js" %>
+    <%= javascript_include_tag "angular/angular.js" %>
+    <%= javascript_include_tag "angular-animate/angular-animate.js" %>
+    <%= javascript_include_tag "angular-aria/angular-aria.js" %>
+    <%= javascript_include_tag "angular-material/angular-material.js" %>
+    <%= javascript_include_tag "ScrollToFixed/jquery-scrolltofixed.js" %>
+    <%= javascript_include_tag "angular-scrolltofixed/dist/angular-scrolltofixed.js" %>
+    <%= javascript_include_tag "slick-carousel/slick/slick.min.js" %>
+    <%= javascript_include_tag "angular-slick/dist/slick.js" %>
+    <%= javascript_include_tag "angular-smooth-scroll/angular-smooth-scroll.js" %>
+    <%= javascript_include_tag "mustache.js/mustache.js" %>
+    <%= javascript_include_tag "slick/dist/slick.js" %>
+    <%= javascript_include_tag "angular-sanitize/angular-sanitize.js" %>
+
+    <%= javascript_include_tag "scripts/app.js" %>
+    <%= javascript_include_tag "scripts/controllers/main.js" %>
+    <%= javascript_include_tag "scripts/controllers/mail-form.js" %>
+    <%= javascript_include_tag "scripts/services/mandrill.js" %>
+    <%= javascript_include_tag "scripts/directives/repeat-times.js" %>
+    <%= javascript_include_tag "scripts/directives/mail-form.js" %>
+  </body>
+</html>

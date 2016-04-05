@@ -1,0 +1,39 @@
+<section
+  id=services
+  class="services padded-section min-height-section dark-background"
+  layout=column
+  layout-align="center center"
+ >
+  <div class="md-display-1 text-align-center">
+    Servicios
+    <md-divider></md-divider>
+  </div>
+
+  <div layout=row layout-wrap layout-align="center">
+    <md-card flex flex-sm=100 flex-gt-sm=40 flex-lg=20 ng-repeat="service in [
+      {
+        title: 'Remodelaciones',
+        description: 'Tabiques, divisiones de interior, cielorrasos, placas de yeso, revestimientos, pisos flotantes, molduras de interior y exterior, instalación de aberturas en general (madera, aluminio, PVC), ampliaciones.',
+        imageName: 'remodelacion.jpg'
+      }, {
+        title: 'Proyectos',
+        description: 'Arquitectura, ingeniería, planos, servicio de topografía, venta y alquiler de obrador, perforación para captación de agua, cerco de obra, bases y plateas de hormigón.',
+        imageName: 'proyectos.jpg'
+      }, {
+        title: 'Steel Framing',
+        description: 'Diseño y cálculo de estructuras, ingeniería de detalle, planos de taller, computo de materiales, fabricación y montaje, dirección de obra.',
+        imageName: 'steel_framing.jpg'
+      },{
+        title: 'Además',
+        description: 'Tambien realizamos: trabajos de electricidad, plomeria, instalaciones de gas, herreria, portones automaticos, aire acondicionado, y venta o alquiler de grupos electrógnenos.',
+        imageName: 'ademas.jpg'
+      }
+    ]">
+      <img ng-src="images/services/{{service.imageName}}" class="md-whiteframe-z1"></img>
+      <md-card-content>
+        <h2 class="md-title">{{ service.title }}</h2>
+        <p>{{ service.description }}</p>
+      </md-card-content>
+    </md-card>
+  </div>
+</section>
