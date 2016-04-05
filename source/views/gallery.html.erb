@@ -10,10 +10,12 @@
   </div>
 
   <div layout=row layout-wrap layout-padding>
-    <div flex-sm=100 flex-gt-sm=25 repeat-times=31>
-      <div class="image md-whiteframe-z2">
-        <img ng-src="images/gallery/{{:: $index + 1 }}.jpg"></img>
+    <% 31.times do |i| %>
+      <div flex-sm=100 flex-gt-sm=25>
+        <div class="image md-whiteframe-z2">
+          <img ng-src="images/gallery/<%= i + 1 %>.jpg"></img>
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
 </section>

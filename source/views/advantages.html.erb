@@ -1,0 +1,19 @@
+<section class="advantages md-whiteframe-1 section min-height-section padded-section light-background" id="advantages" layout="column" layout-align="center center">
+  <div class="md-display-1 text-align-center">
+    Ventajas de la construción en seco con STEEL FRAMING
+    <md-divider></md-divider>
+  </div>
+
+  <div layout=row layout-padding layout-wrap layout-align="center start">
+    <% advantages.each do |a| %>
+      <div flex=20 flex-sm=100 flex-md=40>
+        <div class="icon">
+          <md-icon md-svg-src="<%= image_path "icons/#{a.fetch(:icon_name)}.svg" %>"></md-icon>
+        </div>
+        <md-divider></md-divider>
+        <h3><%= a.fetch(:title) %></h3>
+        <p><%= a.fetch(:text) %></p>
+      </div>
+    <% end %>
+  </div>
+</section>
