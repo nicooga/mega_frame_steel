@@ -78,6 +78,10 @@ GEM
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
+    middleman-ngannotate (1.0.2)
+      execjs (>= 1.4)
+      middleman-core (~> 3.2)
+      middleman-sprockets (~> 3.2)
     middleman-sprockets (3.4.2)
       middleman-core (>= 3.3)
       sprockets (~> 2.12.1)
@@ -140,6 +144,7 @@ DEPENDENCIES
   middleman (= 3.4.1)
   middleman-gh-pages
   middleman-livereload
+  middleman-ngannotate
   middleman-sprockets
   slim
   tzinfo-data

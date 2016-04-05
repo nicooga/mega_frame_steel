@@ -8,17 +8,17 @@ configure :development do
 end
 
 configure :build do
+  activate :ngannotate
   activate :minify_css
   activate :minify_javascript
+  # Needeed to reference assets on gh-pages
+  activate :relative_assets
+  set :relative_links, true
 end
 
 after_configuration do
   sprockets.append_path File.join("#{root}", "vendor/assets/bower")
 end
-
-# Needeed to reference assets on gh-pages
-activate :relative_assets
-set :relative_links, true
 
 set :advantages, [{
   title: 'Óptima relacion costo/calidad',
