@@ -1,0 +1,18 @@
+<md-content class=main>
+  <div ng-include="'views/toolbar.html'"></div>
+  <div ng-include="'views/carousel.html'"></div>
+  <div ng-include="'views/advantages.html'"></div>
+  <div ng-include="'views/services.html'"></div>
+  <div ng-include="'views/gallery.html'"></div>
+  <div ng-include="'views/contact.html'"></div>
+  <div ng-include="'views/footer.html'"></div>
+
+  <a href="{{:: ENV.facebookLink }}" target=_blank class="md-button md-fab facebook-button">
+    <md-tooltip md-direction=right>
+      Conocé nuestra página de Facebook!
+    </md-tooltip>
+
+    <md-icon md-svg-src="images/icons/facebook.svg" class="md-icon-white">
+    </md-icon>
+  </a>
+</md-content>

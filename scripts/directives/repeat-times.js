@@ -1,0 +1,1 @@
+!function(){function e(e,r){function n(e,n,t){var a=e.$eval(t.repeatTimes),o=n.clone().removeAttr("repeat-times");for(i=0;i<a;i++){var l=angular.extend(e.$new(),{$index:i}),m=r(o.clone())(l);m.insertBefore(n)}n.remove()}return{link:n}}angular.module("megaFrameSteelApp").directive("repeatTimes",e)}();

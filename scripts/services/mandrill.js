@@ -1,0 +1,1 @@
+!function(){"use strict";function e(e){function t(t){var s=t.sender,a=t.body,n=t.subject;return e.post("https://mandrillapp.com/api/1.0/messages/send.json",{key:"TD5bGq3aBAMa-3w3Xgwjkw",message:{from_email:s,to:[{email:this.recipient,type:"to"}],autotext:"true",subject:n,html:a}})}return{send:t}}angular.module("megaFrameSteelApp").service("Mandrill",e)}();

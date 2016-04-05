@@ -1,0 +1,28 @@
+<md-toolbar layout="row" layout-align="space-between center" class="main-menu md-whiteframe-z1">
+  <span flex=10 hide-sm hide-md></span>
+
+  <img flex-sm src="/images/logo.svg" class="logo" scroll-to=carousel offset=64></img>
+
+  <span flex hide-sm></span>
+
+  <div hide-sm hide-md layout=row>
+    <div flex>
+      <md-button scroll-to=services offset=64>Servicios</md-button>
+    </div>
+
+    <div flex>
+      <md-button scroll-to=gallery offset=64>Galería</md-button>
+    </div>
+
+    <div flex>
+      <md-button scroll-to=contact offset=64>Contacto</md-button>
+    </div>
+  </div>
+
+  <md-button class="md-icon-button" ng-click="main.showMailForm()">
+    <md-icon md-svg-src=""></md-icon>
+    <md-tooltip md-direction="bottom">Mandanos un mail</md-tooltip>
+  </md-button>
+
+  <span flex=10 hide-sm hide-md></span>
+</md-toolbar>
