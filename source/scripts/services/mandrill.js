@@ -14,7 +14,7 @@
             subject     = mail.subject;
 
         return $http.post('https://mandrillapp.com/api/1.0/messages/send.json', {
-          key:     'TD5bGq3aBAMa-3w3Xgwjkw',
+          key:     'rOiqKS8TFO55PFrwNrLLTw',
           message: {
             from_email: senderEmail,
             to:         [{ email: this.recipient, type: 'to' }],
